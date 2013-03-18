@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  time: 1.5
+  comments: MyText
+  task_id: 1
+
+two:
+  user_id: 1
+  time: 1.5
+  comments: MyText
+  task_id: 1

@@ -1,0 +1,18 @@
+<h3>@message</h3>  
+
+<%= form_for(@user) do |f| %>
+  
+  <div class="field" >
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email], :class => 'admin' %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password, :class => 'special_input' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

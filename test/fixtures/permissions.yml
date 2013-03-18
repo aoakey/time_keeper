@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  project_id: 1
+  user_id: 1
+  can_view: false
+  can_edit: false
+  can_record: false
+  can_delete: false
+
+two:
+  project_id: 1
+  user_id: 1
+  can_view: false
+  can_edit: false
+  can_record: false
+  can_delete: false

@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @project.description %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @project.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @project.end_date %>
+</p>
+
+<p>
+  <b>Creator:</b>
+  <%= @project.creator_id %>
+</p>
+
+<p>
+  <b>Manager:</b>
+  <%= @project.manager_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @project.status %>
+</p>
+
+<% if @project.permissions != nil %>
+  <%= @project.permissions.count %> PERMISSIONS SET
+<% else %>
+  NO PERMISSIONS SET
+<% end %>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

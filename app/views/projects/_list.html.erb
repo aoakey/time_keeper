@@ -1,0 +1,35 @@
+<h2>Current Projects</h2>
+
+<% if @projects != nil %>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Creator</th>
+        <th>Manager</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.description %></td>
+        <td><%= project.start_date %></td>
+        <td><%= project.end_date %></td>
+        <td><%= project.creator_id %></td>
+        <td><%= project.manager_id %></td>
+        <td><%= project.status %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+<% else %>
+      <h3>No Projects Found</h3>
+      </tr>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  project_id: 1
+  creator_id: 1
+  assigned_id: 1
+  status: MyString
+
+two:
+  name: MyString
+  description: MyText
+  project_id: 1
+  creator_id: 1
+  assigned_id: 1
+  status: MyString
