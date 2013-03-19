@@ -1,10 +1,8 @@
 class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
-  def index
-    @current_user = User.find_by_id(session[:user_id])    
+  def index  
     @projects = @current_user.projects
-                              
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,12 +14,18 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project = Project.find(params[:id])
+    
+    @tasks = @project.tasks.where(parent_id: 0)
+
+    @root_task = @project.tasks.where(id: 1)
+    @sub = @root_task.sub_tasks
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @project }
     end
   end
+  
 
   # GET /projects/new
   # GET /projects/new.json

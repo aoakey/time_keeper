@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
 	end
 
 	def index
-      @user = @current_user      
+      @user = @current_user 
+      @projects = @current_user.projects     
 
       respond_to do |format|
         format.html # show.html.erb

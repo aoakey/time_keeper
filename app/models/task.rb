@@ -5,7 +5,7 @@ class Task < ActiveRecord::Base
   belongs_to :creator, :class_name => "User"
   belongs_to :assigned, :class_name => "User"
   belongs_to :parent_task, :class_name => "Task"
-  belongs_to :sub_tasks, :class_name => "Task", :foreign_key => "parent_id"
+  has_many :sub_tasks, :class_name => "Task", :foreign_key => "parent_id"
   has_many :notes, :as => :item
 
 end

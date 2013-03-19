@@ -12,22 +12,22 @@
 
 <p>
   <b>Start date:</b>
-  <%= @project.start_date %>
+  <%= @project.start_date.strftime("%m/%d/%Y") %>
 </p>
 
 <p>
   <b>End date:</b>
-  <%= @project.end_date %>
+  <%= @project.end_date.strftime("%m/%d/%Y") %>
 </p>
 
 <p>
   <b>Creator:</b>
-  <%= @project.creator_id %>
+  <%= @project.creator.first_name %> <%= @project.creator.last_name %>
 </p>
 
 <p>
   <b>Manager:</b>
-  <%= @project.manager_id %>
+  <%= @project.manager.first_name %> <%= @project.manager.last_name %>
 </p>
 
 <p>
@@ -35,11 +35,18 @@
   <%= @project.status %>
 </p>
 
-<% if @project.permissions != nil %>
-  <%= @project.permissions.count %> PERMISSIONS SET
-<% else %>
-  NO PERMISSIONS SET
+<h2>Tasks</h2>
+
+<% @tasks.each do |task| %>
+  <li>
+    <%= task.name %>    
+  </li>
+
 <% end %>
+
+<%= @sub %>
+
+
 
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

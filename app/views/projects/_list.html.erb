@@ -23,9 +23,7 @@
         <td><%= project.creator_id %></td>
         <td><%= project.manager_id %></td>
         <td><%= project.status %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', project %></td>        
       </tr>
     <% end %>
     </table>
